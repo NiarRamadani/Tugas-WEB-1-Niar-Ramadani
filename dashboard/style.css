@@ -1,0 +1,58 @@
+/* Layout */
+/* Mengatur desain header */
+header{
+  background: #2c3e50; /* Ubah background dari #280872 menjadi #1A4D8F */
+  color: #eee; /* Ubah warna teks dari #fff menjadi #eee */
+  padding: 20px 30px; /* Ubah padding dari 15px 20px menjadi 20px 30px */
+  font-size: 22px; /* Ubah ukuran font dari 20px menjadi 22px */
+}
+/* Mengatur lebar menu 25% dengan background hitam */
+aside{
+  flex: 20%; 
+  float: left;
+  background: #111; /* Ubah background dari #222 menjadi #111 */
+}
+/* Mengatur lebar konten utama 75% dengan background putih */
+section.main{
+  flex: 80%; /* Ubah lebar dari 80% menjadi 75% */
+  background: #f9f9f9; /* Ubah background dari #fff menjadi #f9f9f9 */
+  min-height: 530px ;
+  padding: 15px 20px;
+  flex-grow: 1;
+}
+
+/* Mengatur footer dengan background abu-abu dan teks di tengah */
+footer{
+  background: #bbb; /* Ubah background dari #ccc menjadi #bbb */
+  color: #666; /* Ubah warna teks dari #555 menjadi #666 */
+  padding: 25px; /* Ubah padding dari 20px menjadi 25px */
+  text-align: right; /* Ubah teks rata tengah menjadi rata kanan */
+}
+
+/* Mengatur layout pada layar kecil (responsive) */
+@media (max-width: 700px){
+  .container{
+    flex-direction: column;
+  }
+}
+/* Navigasi */
+/* Membuang padding tag <ul> */
+.menu{
+  padding: 0;
+}
+/* Menambah border bawah tag <li> */
+.menu li{
+  border-bottom: 1px dashed #555; /* Ubah border dari dotted #444 menjadi dashed #555 */
+}
+/* Mengatur desain menu yang dibuat dengan tag a */
+.menu a{
+  display: block;
+  padding: 18px 25px; /* Ubah padding dari 20px 20px menjadi 18px 25px */
+  list-style: none;
+  color: #fff;
+  text-decoration: none;
+}
+/* Mengganti background menu ketika ditunjuk mouse */
+.menu a:hover{
+  background: #222; /* Ubah background dari #000 menjadi #222 */
+}

@@ -1,0 +1,137 @@
+/* Layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Mengatur desain header */
+header {
+  background: #280872;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Sidebar (aside) */
+aside {
+  flex: 0 0 20%; /* Sidebar mengambil 20% dari lebar */
+  background: #222;
+  height: 100vh;
+  padding-top: 20px;
+  position: fixed; /* Sidebar tetap pada posisinya */
+  top: 0;
+  left: 0;
+  overflow-y: auto; /* Jika terlalu panjang, sidebar bisa discroll */
+}
+
+/* Mengatur lebar konten utama 80% */
+section.main {
+  margin-left: 20%; /* Memberi ruang untuk sidebar */
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Mengatur footer */
+footer {
+  background: #ccc;
+  color: #555;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Navigasi (menu) */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  border-bottom: 1px dotted #444;
+}
+
+.menu a {
+  display: block;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu a:hover, .menu a.aktif {
+  background: #000;
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+
+  aside {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  section.main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Tabel */
+/* Mengatur desain judul halaman dengan border di bawah */
+.judul{
+  color: #555;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  }
+  /* Mengatur agar lebar tabel penuh dan antara border tidak memiliki jarak */
+  .table{
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  }
+  
+  /* Menambahkan border dan padding pada sel tabel */
+  .table th, .table td{
+  border: 1px solid #ccc;
+  padding: 20px;
+  }
+  
+  /* Mengatur background bagian judul tabel*/
+  .table th{
+  background: #eee;
+  }
+  /* Mengatur desain tombol yang dibuat dengan tag <a> */
+  .tombol{
+  display: inline-block;
+  max-width: 150px;
+  padding: 15px 30px;
+  color: #fff;
+  text-decoration: none;
+  background: #038ade;
+  cursor: pointer;
+  }
+  /* Desain tombol edit dan hapus agar lebih kecil*/
+  .tombol.edit, .tombol.hapus{
+  padding: 10px 15px;
+  font-size: 12px;
+  }
+  .tombol.hapus{
+  background:#fc4c4c;
+  }

@@ -1,0 +1,167 @@
+/* Layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif; /* Mengubah font agar lebih modern */
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Mengatur desain header */
+header {
+  background: linear-gradient(135deg, #280872, #4e0da3); /* Gradien pada header */
+  color: #fff;
+  padding: 20px 30px; /* Padding diperbesar */
+  font-size: 24px; 
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Menambahkan shadow */
+  position: relative;
+}
+
+/* Sidebar (aside) */
+aside {
+  flex: 0 0 20%; 
+  background: #333; /* Mengubah warna background lebih lembut */
+  height: 100vh;
+  padding-top: 30px; /* Menambah jarak dari atas */
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto; 
+}
+
+/* Mengatur lebar konten utama 80% */
+section.main {
+  margin-left: 20%; /* Memberi ruang untuk sidebar */
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Mengatur footer */
+footer {
+  background: #e0e0e0; /* Warna footer lebih terang */
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan shadow pada footer */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Navigasi (menu) */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  border-bottom: 1px dotted #444;
+}
+
+.menu a {
+  display: block;
+  padding: 20px;
+  color: #ddd; /* Mengubah warna teks agar lebih lembut */
+  text-decoration: none;
+  transition: background 0.3s ease; /* Efek transisi untuk hover */
+}
+
+.menu a:hover, .menu a.aktif {
+  background: #444; /* Warna hover lebih lembut */
+  color: #fff;
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 700px) {
+  .container {
+      flex-direction: column;
+  }
+
+  aside {
+      position: relative;
+      width: 100%;
+      height: auto;
+  }
+
+  section.main {
+      margin-left: 0;
+      width: 100%;
+  }
+}
+
+/* Halaman Form */
+/* Mengatur form-group agar tidak terpengaruh float */
+.form-group {
+  clear: both;
+}
+
+/* Mengatur lebar label 30% dengan teks bold */
+.form-group label {
+  display: block;
+  padding: 15px 0;
+  float: left;
+  width: 30%;
+  font-weight: bold;
+}
+
+/* Mengatur lebar .input 50% dan sejajar dengan label */
+.form-group .input {
+  display: block;
+  width: 50%;
+  float: left;
+}
+
+/* Mengatur input dan label pada form */
+.form-group .input input, .form-group .input select {
+  width: 90%; /* Lebar input lebih besar */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Membuat input lebih bulat */
+  box-sizing: border-box;
+  margin-bottom: 10px; /* Jarak antar input */
+}
+
+input[type=radio] {
+  width: 30px; /* Radio button lebih kecil */
+}
+
+/* Mengatur tombol submit dan reset */
+.tombol.simpan, .tombol.reset {
+  color: #fff;
+  padding: 10px 20px; /* Menambah padding pada tombol */
+  border: none;
+  border-radius: 25px; /* Membuat tombol menjadi lebih bulat */
+  cursor: pointer;
+  transition: background 0.3s ease; /* Menambahkan transisi untuk efek hover */
+}
+
+.tombol.simpan {
+  background: #038ade;
+}
+
+.tombol.simpan:hover {
+  background: #026bb5;
+}
+
+.tombol.reset {
+  background: #fb8307;
+}
+
+.tombol.reset:hover {
+  background: #e76d04;
+}
+
+/* Memebuat tampilan form menumpuk pada layar kecil */
+@media (max-width: 700px) {
+  .form-group label, .form-group .input {
+      width: 100%;
+  }
+}
